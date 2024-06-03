@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Netflix Sans', sans-serif;
+    background-color: #141414;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(192, 192, 192);
+    border-radius: 10px;
+}
+
+/* navbar section  */
+.navbar {
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition-timing-function: ease-in;
+    transition: all .5s;
+}
+
+.active {
+    background-color: #111;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 2rem;
+}
+
+.nav-left ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.user {
+    height: 2.5rem;
+}
+
+
+
+/* banner section  */
+
+#banner-box {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#banner-content {
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 40%;
+    text-shadow: 2px 2px 5px black;
+}
+
+#banner-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+#banner-desc {
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.btn,
+.info-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.info-btn {
+    background-color: rgba(165, 164, 164, 0.582);
+    margin-left: 15px;
+}
+
+.btn:hover,
+.info-btn:hover {
+    background-color: rgba(165, 164, 164, 0.274);
+}
+
+#banner-fadeBottom {
+    position: absolute;
+    bottom: 0;
+    height: 7.4rem;
+    background: linear-gradient(180deg, transparent, rgba(37, 37, 37, .61), #111);
+}
+
+
+
+/* movie rows  */
+#headrow {
+    margin-top: 15px;
+}
+
+.row {
+    margin-left: 20px;
+    color: white;
+}
+
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+
+}
+
+.row__poster:hover {
+    transform: scale(1.30);
+}
+
+.movie__info {
+    height: 300px;
+    min-width: 200px;
+    aspect-ratio: 0.5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row__posterLarge {
+    object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-right: 10px;
+    transition: transform 500ms;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.movie__info:hover>.row__posterLarge {
+    z-index: -1;
+    transform: scale(1.30);
+    opacity: 0.5;
+}
+
+.movie__desc {
+    padding: 20px;
+    text-shadow: 2px 2px 5px black;
+    font-weight: 600;
+}
+
+.movie__btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
